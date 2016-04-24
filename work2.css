@@ -1,0 +1,133 @@
+*{
+    padding:0;
+    border:0;
+    margin:0;
+}
+
+
+
+body{
+    height:1000px;
+    width:1000px;
+    margin:0 auto;
+}
+
+.Title{
+    height:40px;
+    width:600px;
+    margin:40px auto 0 20%;
+    padding-left: 200px;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.List{
+
+    width: 400px;
+    margin: 0 auto 0 30%;
+    border: 3px solid;
+    padding: 4px;
+}
+
+
+.open {
+    height: auto;
+    overflow: visible;
+}
+
+
+dl{
+    height: 30px;
+    overflow: hidden;
+    font-size: 14px;
+    width: 100%;
+    background: #9c0;
+    margin-bottom:1px;
+}
+
+.Dt{
+    height: 24px;
+    width: 100%;
+    border-bottom:1px solid white;
+    padding-top: 6px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.s_dt{
+    font-weight: bold;
+    height: 14px;
+    overflow:hidden;
+}
+
+.Dd{
+    height: 30px;
+    width: 390px;
+    border-bottom:1px solid white;
+    padding-left: 10px;
+}
+
+.s_dd{
+    font: 400 11px/30px Tahoma;
+    cursor: pointer;
+}
+
+.open {
+    height: auto;
+    overflow: visible;
+}
+
+.Test{
+    margin-top: 20px;
+    width: 1000px;
+    height: 500px
+
+}
+
+.test1{
+
+}
+
+.t1btn{
+    height:20px;
+    width: 40px;
+    text-align: center;
+    border:2px solid #a0a0a0;
+}
+
+.t1fm{
+    margin: 0 auto;
+    width:233px;
+}
+
+.t1bg{
+    height: 100px;
+    width: 100px;
+    background: #ccc;
+    margin:10px auto 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
