@@ -210,7 +210,7 @@ dl{
     width: 70px;
     height: 61px;
     border:1px solid #c90;
-    display: block;
+    display: none;
 }
 
 .t7menu>div{
@@ -228,7 +228,45 @@ dl{
     font-size:14px;
 }
 
+.t25bg{
+    width: 100%;
+    text-align: center;
+}
 
+.t25bg>input{
+    height: 24px;
+    width: 60px;
+    border:1px solid #c0c0c0;
+}
+
+.t25bg>button{
+    height: 24px;
+    width: 80px;
+    border:1px solid black;
+}
+
+.s_vs{
+    font-size : 14px;
+    font-weight: bold;
+    margin:0 5px;
+}
+
+.s_q{
+    font-size: 18px;
+    color: red;
+}
+
+.t24bg{
+    text-align:center;
+}
+
+.t24{
+    font-size: 16px;
+    height: 20px;
+    width: auto;
+    margin:2px auto;
+    border: 1px solid #c0c0c0;
+}
 
 
 

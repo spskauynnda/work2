@@ -24,7 +24,16 @@ function test7() {
     var testn = document.getElementById("test7");
     testn.style.display = testn.style.display == "none"?"block":"none";
 }
+function test24() {
+    var testn = document.getElementById("test24");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
+function test25() {
+    var testn = document.getElementById("test25");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
 /*上处极度希望能够合并*/
+
 
 /*test1*/
 function t1btn_1() {
@@ -64,6 +73,7 @@ function t2son(){
     */
 }
 
+/*test3*/
 function t3btn(){
     var oT3btn = document.getElementById("t3btn");
     var oT3t1= document.getElementById("t3t1");
@@ -72,6 +82,7 @@ function t3btn(){
     alert(oT3t2.value);
 }
 
+/*test4*/
 function t4btn(){
     var oT4btn = document.getElementById("t4btn");
     var oT4li = document.getElementById("t4ul").getElementsByTagName("li");
@@ -79,6 +90,7 @@ function t4btn(){
         oT4li[i].style.background="red";
 }
 
+/*test7*/
 function t7Cover(i){
     var oT7div = document.getElementById("t7menu").getElementsByTagName("div");
     oT7div[i].style.background = "#d0d0d0";
@@ -95,11 +107,19 @@ function t7btn(){
     oT7menu.style.display = oT7menu.style.display == "none"?"block":"none";
 }
 
+/*test24*/
+function t24btn(){
+    var oT24 = document.getElementById("t24");
+    oT24.value++;
+}
 
-
-
-
-
+/*test25*/
+function t25btn(){
+    var oT251 = document.getElementById("T251");
+    var oT252 = document.getElementById("T252");
+    var oT25sp = document.getElementById("s_q");
+    oT251.value > oT252.value ? (oT25sp.innerHTML = oT251.value) : (oT25sp.innerHTML = oT252.value);
+}
 
 
 

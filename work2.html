@@ -99,10 +99,10 @@
                 <span class="s_dd">2) 用parseInt解析数字，并求和</span>
             </dd>
             <dd class="Dd">
-                <span class="s_dd">3) 累加按钮，自加1</span>
+                <span class="s_dd" onclick="test24()">3) 累加按钮，自加1</span>
             </dd>
             <dd class="Dd">
-                <span class="s_dd">4) 输入两个数字，比较大小</span>
+                <span class="s_dd" onclick="test25()">4) 输入两个数字，比较大小</span>
             </dd>
             <dd class="Dd">
                 <span class="s_dd">5) 页面加载后累加，自加1</span>
@@ -176,15 +176,30 @@
             </div>
         </div>
 
+        <div class="test" id="test24" >
+            <div class="t24bg">
+                <input type="button" class="t24" id="t24" value="0" onclick="t24btn()"/>
+            </div>
+        </div>
+
+        <div class="test" id="test25">
+            <div id="t25bg" class="t25bg">
+                <input id="T251" type="text" />
+                <span class="s_vs">vs</span>
+                <input id="T252" type="text" />
+                <button onclick="t25btn()">最大的数是》</button>
+                <span id="s_q" class="s_q">?</span>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </div>
-
-
-
-
     <script type="text/javascript">
-
-
     </script>
-
 </body>
 </html>
