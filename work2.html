@@ -18,16 +18,16 @@
                 <span class="s_dt">第一课</span>
             </dt>
             <dd class="Dd">
-                <span class="s_dd">1) 控制div属性</span>
+                <span class="s_dd"  onclick="test1()">1) 控制div属性</span>
             </dd>
             <dd class="Dd">
                 <span class="s_dd">2) 网页换肤</span>
             </dd>
             <dd class="Dd">
-                <span class="s_dd">3) 函数接收参数并弹出</span>
+                <span class="s_dd" onclick="test3()">3) 函数接收参数并弹出</span>
             </dd>
             <dd class="Dd">
-                <span class="s_dd">4) 用循环将三个Div变成红色</span>
+                <span class="s_dd" onclick="test4()">4) 用循环将三个Div变成红色</span>
             </dd>
             <dd class="Dd">
                 <span class="s_dd">5) 鼠标移入/移出改变样式</span>
@@ -42,7 +42,7 @@
                 <span class="s_dt">第二课</span>
             </dt>
             <dd class="Dd">
-                <span class="s_dd">1) 百度输入法</span>
+                <span class="s_dd" onclick="test7()">1) 百度输入法</span>
             </dd>
             <dd class="Dd">
                 <span class="s_dd">2) 点击Div，显示其innerHTML</span>
@@ -122,8 +122,8 @@
         </dl>
     </div>
 
-    <div class="Test">
-        <div class="test1">
+    <div class="Test" id="Test">
+        <div class="test" id="test1">
             <form class="t1fm">
                 <input class="t1btn" type="button"  value="变宽" onclick="t1btn_1()"></input>
                 <input class="t1btn" type="button"  value="变高" onclick="t1btn_2()"></input>
@@ -133,21 +133,56 @@
             </form>
             <div id="t1bg" class="t1bg"> </div>
         </div>
+        <!--
+            <div class="test" id="test2" style="display: block">
+                <ul class="t2main" id="t2main">
+                    <li class="t2son"></li>
+                    <li class="t2son"></li>
+                    <li class="t2son"></li>
+                </ul>
+            </div>
+
+    -->
+        <div class="test" id="test3">
+            <form class="t3fm">
+                <input id="t3t1" type="text" value="Java" />
+                <input id="t3t2" type="text" value="Script" />
+                <div id="t3btn" onclick="t3btn()">传参</div>
+            </form>
+
+        </div>
+
+        <div class="test" id="test4">
+            <div id="t4btn" class="t4btn" onclick="t4btn()">点击将DIV变成红色</div>
+            <ul id="t4ul" class="t4ul">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div class="test" id="test7">
+            <div class="t7btn" id="t7btn" onclick="t7btn()" >输入法</div>
+            <div class="t7menu" id="t7menu">
+                <div onmouseover="t7Cover(0)" onmouseout="t7Cout(0)" >
+                    <span class="s_t7">手写</span>
+                </div>
+                <div onmouseover="t7Cover(1)"  onmouseout="t7Cout(1)"  class="t7border"  >
+                    <span class="s_t7">拼音</span>
+                </div>
+                <div  onmouseover="t7Cover(2)" onmouseout="t7Cout(2)" >
+                    <span class="s_t7">输入</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
 
 
+    <script type="text/javascript">
 
-
-
-
-
-
-
-
-
-    <script>
 
     </script>
 
