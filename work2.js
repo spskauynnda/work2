@@ -20,6 +20,14 @@ function test4() {
     var testn = document.getElementById("test4");
     testn.style.display = testn.style.display == "none"?"block":"none";
 }
+function test5() {
+    var testn = document.getElementById("test5");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
+function test6() {
+    var testn = document.getElementById("test6");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
 function test7() {
     var testn = document.getElementById("test7");
     testn.style.display = testn.style.display == "none"?"block":"none";
@@ -90,6 +98,27 @@ function t4btn(){
         oT4li[i].style.background="red";
 }
 
+function t5over(){
+    var oT5 = document.getElementById("t5org");
+    oT5.className="t5hover";
+}
+
+function t5out(){
+    var oT5 = document.getElementById("t5org");
+    oT5.className="t5org";
+}
+
+function t6bbbover(){
+    var oT6btn = document.getElementById("t6btn");
+    var oT6bbb = document.getElementById("t6bbb");
+    oT6bbb.style.display = "block";
+}
+
+function t6bbbout(){
+    var oT6btn = document.getElementById("t6btn");
+    var oT6bbb = document.getElementById("t6bbb");
+    oT6bbb.style.display = "none";
+}
 /*test7*/
 function t7Cover(i){
     var oT7div = document.getElementById("t7menu").getElementsByTagName("div");
@@ -120,9 +149,6 @@ function t25btn(){
     var oT25sp = document.getElementById("s_q");
     oT251.value > oT252.value ? (oT25sp.innerHTML = oT251.value) : (oT25sp.innerHTML = oT252.value);
 }
-
-
-
 
 
 

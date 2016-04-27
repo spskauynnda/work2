@@ -189,6 +189,53 @@ dl{
     background: black;
 }
 
+.t5org{
+    height: 180px;
+    width: 180px;
+    background: black;
+    font-size: 16px;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    border: 10px solid black;
+}
+
+
+.t5hover{
+    height: 180px;
+    width: 180px;
+    background: #d0d0d0;
+    font-size: 16px;
+    color: red;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    border: 10px solid red;
+}
+
+.t6fm{
+    margin:0 auto;
+    height: 200px;
+    width: 300px;
+    font-size: 12px;
+}
+
+.t6bbb{
+    height: 35px;
+    width: 300px;
+    background: yellow;
+    border: 1px solid orange;
+    padding:5px;
+    margin-top: 4px;
+    display: none;
+}
+
+.t6_s1{
+    position:relative;
+    bottom: 3px;
+}
+
 #test7{
     padding-left: 400px;
 

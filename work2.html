@@ -30,10 +30,10 @@
                 <span class="s_dd" onclick="test4()">4) 用循环将三个Div变成红色</span>
             </dd>
             <dd class="Dd">
-                <span class="s_dd">5) 鼠标移入/移出改变样式</span>
+                <span class="s_dd" onclick="test5()">5) 鼠标移入/移出改变样式</span>
             </dd>
             <dd class="Dd">
-                <span class="s_dd">6) 记住密码提示框</span>
+                <span class="s_dd" onclick="test6()">6) 记住密码提示框</span>
             </dd>
         </dl>
 
@@ -160,6 +160,22 @@
                 <li></li>
             </ul>
         </div>
+
+        <div class="test" id="test5">
+            <div class="t5org" id="t5org" onmouseover="t5over()" onmouseout="t5out()">
+                <span class="s_t5">鼠标移入改变样式~~</span>
+            </div>
+        </div>
+
+        <div class="test" id="test6">
+            <form class="t6fm">
+                <input type="checkbox" id="t6btn"  onmouseover="t6bbbover()" onmouseout="t6bbbout()"/>
+                <span class="t6_s1">两周内自动登录</span>
+                <div class="t6bbb" id="t6bbb">
+                    <span>为了您的信息安全，请不要在网吧或公用电脑上使用此功能</span>
+                </div>
+            </form>
+        </div >
 
         <div class="test" id="test7">
             <div class="t7btn" id="t7btn" onclick="t7btn()" >输入法</div>
