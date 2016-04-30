@@ -25,7 +25,7 @@ body{
     height:40px;
     width:600px;
     margin:40px auto 0 20%;
-    padding-left: 200px;
+    padding-left: 257px;
 }
 
 h2{
@@ -273,6 +273,73 @@ dl{
 
 .s_t7{
     font-size:14px;
+}
+
+.t8bg{
+}
+
+.t8box{
+    width: 450px;
+    margin: 5px auto;
+    padding: 14px;
+    font-size: 12px;
+    border: 1px solid black;
+}
+
+#test10{
+    display: none
+}
+
+.t10btn{
+    height: 16px;
+    width: 60px;
+    margin: 20px auto;
+    border: 1px solid black;
+    display: block;
+}
+
+.t10Div1{
+    height: 200px;
+    width: 300px;
+    border:4px solid orange;
+    position: absolute;
+    top: 200px;
+    left:40%;
+    background: white;
+    display: none;
+}
+
+.t10Div2{
+    height: 20px;
+    width: 100%;
+    border-bottom: 4px solid orange;
+    background: yellow;
+}
+
+.t10Div3{
+    margin-top:2px;
+    margin-right: 2px;
+    height: 14px;
+    width: 14px;
+    border: 1px solid orange;
+    float:right;
+    color: orange;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    line-height: 10px;
+    cursor: pointer;
+}
+
+.t10bg{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 200%;
+    width: 100%;
+    opacity: 0.5;
+    background: #d0d0d0;
+    display: none;
 }
 
 .t25bg{

@@ -32,6 +32,14 @@ function test7() {
     var testn = document.getElementById("test7");
     testn.style.display = testn.style.display == "none"?"block":"none";
 }
+function test8(){
+    var testn = document.getElementById("test8");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
+function test10() {
+    var testn = document.getElementById("test10");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
 function test24() {
     var testn = document.getElementById("test24");
     testn.style.display = testn.style.display == "none"?"block":"none";
@@ -136,7 +144,35 @@ function t7btn(){
     oT7menu.style.display = oT7menu.style.display == "none"?"block":"none";
 }
 
-/*test24*/
+
+function t8bg(){
+    var oDiv = document.getElementById("t8bg").getElementsByTagName("div");
+    for(var i = 0; i < oDiv.length; i++){
+        oDiv[i].onclick = function (){
+            alert(this.innerHTML);
+        }
+    }
+}
+
+function t10btn(){
+    var oBtn = document.getElementById("t10btn");
+    var oDiv1 = document.getElementById("t10Div1");
+    var oDiv3 = document.getElementById("t10Div3");
+    var oT10bg = document.getElementById("t10bg");
+    oBtn.onclick = function(){
+        oDiv1.style.display = "block";
+        oT10bg.style.display = "block";
+    }
+    oDiv3.onclick = function(){
+        oDiv1.style.display = "none";
+        oT10bg.style.display = "none";
+    }
+}
+
+
+
+
+    /*test24*/
 function t24btn(){
     var oT24 = document.getElementById("t24");
     oT24.value++;
@@ -154,5 +190,6 @@ function t25btn(){
 
 
 
+window.onload = function(){t8bg();t10btn();}
 
 
