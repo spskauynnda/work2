@@ -34,13 +34,12 @@ h2{
 }
 
 .List{
-
     width: 400px;
-    margin: 0 auto 0 30%;
-    border: 3px solid;
+    margin: 0 auto;
+    border: 10px outset;
+    border-radius: 10px;
     padding: 4px;
 }
-
 
 .open {
     height: auto;
@@ -341,6 +340,81 @@ dl{
     background: #d0d0d0;
     display: none;
 }
+
+.t12box{
+    height: 285px;
+    width: 710px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.t12li1{
+    height: 130px;
+    width: 130px;
+    border: 1px solid #a0a0a0;
+    float:left;
+    margin: 5px;
+    opacity: 0.4;
+}
+
+.t12li2{
+    height: 130px;
+    width: 130px;
+    border: 1px solid #b0b0b0;
+    float:left;
+    margin: 5px;
+}
+
+.t13box{
+    width: 400px;
+    margin:0 auto;
+    border: 1px solid black;
+}
+
+.t13menu{
+    width: 400px;
+    height: 40px;
+    background: black;
+}
+
+.t13li1{
+    width: 100px;
+    height: 40px;
+    color: white;
+    font-size: 12px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+}
+
+.t13li2{
+    width: 100px;
+    height: 39px;
+    color: black;
+    background: grey;
+    font-size: 12px;
+    float: left;
+    border-bottom: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+}
+
+.t13ul1{
+    line-height: 40px;
+    margin-left: 10px;
+    display: block;
+}
+
+.t13ul2{
+    display:none;
+}
+
+.t13ul1>li{
+    height: 40px;
+    width: 100%;
+}
+
 
 .t25bg{
     width: 100%;

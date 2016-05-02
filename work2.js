@@ -5,6 +5,7 @@ function list(dtNode) {
     } else {
         dlNode.className = "open";
     }
+
 }
 
 /*下处多次尝试精简，然而不知为何都失败了*/
@@ -38,6 +39,14 @@ function test8(){
 }
 function test10() {
     var testn = document.getElementById("test10");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
+function test12() {
+    var testn = document.getElementById("test12");
+    testn.style.display = testn.style.display == "none"?"block":"none";
+}
+function test13() {
+    var testn = document.getElementById("test13");
     testn.style.display = testn.style.display == "none"?"block":"none";
 }
 function test24() {
@@ -169,8 +178,36 @@ function t10btn(){
     }
 }
 
+function t12li(){
+    var oLi = document.getElementById("t12box").getElementsByTagName("li");
+    for(var i = 0;i < oLi.length; i++){
+        oLi[i].onmouseover = function (){
+            this.className = "t12li2";
+        }
+        oLi[i].onmouseout = function (){
+            this.className = "t12li1";
+        }
+    }
+}
 
-
+function t13li(){
+    var oLi = document.getElementById("t13menu").getElementsByTagName("li");
+    var oDiv = document.getElementById("t13com").getElementsByTagName("div");
+    var i,j,k;
+    for (i = 0;i < oLi.length; i++ ){
+       oLi[i].index = i;
+        oLi[i].onmouseover = function(){
+            for (j = 0; j < oLi.length; j++){
+                oLi[j].className = "t13li1";
+            }
+            this.className = "t13li2";
+            for (k = 0; k < oDiv.length; k++){
+                oDiv[k].className = "t13ul2";
+            }
+            oDiv[this.index].className = "t13ul1";
+        }
+    }
+}
 
     /*test24*/
 function t24btn(){
@@ -190,6 +227,6 @@ function t25btn(){
 
 
 
-window.onload = function(){t8bg();t10btn();}
+window.onload = function(){t8bg();t10btn();t12li();t13li();}
 
 
