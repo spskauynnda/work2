@@ -8,6 +8,14 @@ function list(dtNode) {
 
 }
 
+
+function reset(){
+    var testset = document.getElementsByClassName("test");
+    for (var i=0;i < testset.length;i++)
+        testset[i].style.display = "none";
+}
+
+
 /*下处多次尝试精简，然而不知为何都失败了*/
 function test1() {
     var testn = document.getElementById("test1");
@@ -15,7 +23,7 @@ function test1() {
 }
 function test3() {
     var testn = document.getElementById("test3");
-    testn.style.display = testn.style.display == "none"?"block":"none";
+    testn.style.display == "none"? testn.style.display = "block": testn.style.display = "none";
 }
 function test4() {
     var testn = document.getElementById("test4");
@@ -89,13 +97,13 @@ function t2son(){
         oT2son.style.background = blue;
     }
     /*
-    for (var i=0;i<oT2son.length;i++)
-    {
-        oT2son[i].onclick = function(){
-            oT2son[i].style.background = blue;
-        }
-    }
-    */
+     for (var i=0;i<oT2son.length;i++)
+     {
+     oT2son[i].onclick = function(){
+     oT2son[i].style.background = blue;
+     }
+     }
+     */
 }
 
 /*test3*/
@@ -195,7 +203,7 @@ function t13li(){
     var oDiv = document.getElementById("t13com").getElementsByTagName("div");
     var i,j,k;
     for (i = 0;i < oLi.length; i++ ){
-       oLi[i].index = i;
+        oLi[i].index = i;
         oLi[i].onmouseover = function(){
             for (j = 0; j < oLi.length; j++){
                 oLi[j].className = "t13li1";
@@ -209,7 +217,7 @@ function t13li(){
     }
 }
 
-    /*test24*/
+/*test24*/
 function t24btn(){
     var oT24 = document.getElementById("t24");
     oT24.value++;
@@ -225,8 +233,6 @@ function t25btn(){
 
 
 
-
-
-window.onload = function(){t8bg();t10btn();t12li();t13li();}
+window.onload = function(){t8bg();t10btn();t12li();t13li();reset();}
 
 
