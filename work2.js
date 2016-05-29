@@ -1,3 +1,43 @@
+// ********************封装********************
+var _$ = function(id){
+    if (document.getElementById(id)) {
+        return document.getElementById(id);
+    } else {
+        return false;
+    }
+}
+var _$$ = function(classname){
+    if (document.getElementsByClassName(classname)) {
+        return document.getElementsByClassName(classname);
+    } else {
+        return false;
+    }
+}
+//*********************************************
+
+
+
+
+
+// ********************控制********************
+//  重置所有test.display为none，赋初值
+function reset(){
+    var testset = _$$("test");
+    for (var i=0;i < testset.length;i++)
+        testset[i].style.display = "none";
+}
+//  设置所有Dd的链接效果
+function testa() {
+    var oDd = document.getElementsByClassName("Dd");
+    var testn = document.getElementsByClassName("test");
+    for (var i=0;i < oDd.length;i++){
+        oDd[i].index = i;
+        oDd[i].onclick = function () {
+            testn[this.index].style.display = testn[this.index].style.display == "none"?"block":"none";
+        }
+    }
+}
+//  子元素对父元素控制的案例（强行案例）
 function list(dtNode) {
     var dlNode = dtNode.parentNode;
     if (dlNode.className == "open") {
@@ -5,97 +45,37 @@ function list(dtNode) {
     } else {
         dlNode.className = "open";
     }
-
 }
-
-
-function reset(){
-    var testset = document.getElementsByClassName("test");
-    for (var i=0;i < testset.length;i++)
-        testset[i].style.display = "none";
-}
+//************************************************
 
 
-/*下处多次尝试精简，然而不知为何都失败了*/
-function test1() {
-    var testn = document.getElementById("test1");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test3() {
-    var testn = document.getElementById("test3");
-    testn.style.display == "none"? testn.style.display = "block": testn.style.display = "none";
-}
-function test4() {
-    var testn = document.getElementById("test4");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test5() {
-    var testn = document.getElementById("test5");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test6() {
-    var testn = document.getElementById("test6");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test7() {
-    var testn = document.getElementById("test7");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test8(){
-    var testn = document.getElementById("test8");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test10() {
-    var testn = document.getElementById("test10");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test12() {
-    var testn = document.getElementById("test12");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test13() {
-    var testn = document.getElementById("test13");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test24() {
-    var testn = document.getElementById("test24");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-function test25() {
-    var testn = document.getElementById("test25");
-    testn.style.display = testn.style.display == "none"?"block":"none";
-}
-/*上处极度希望能够合并*/
 
 
+
+//********************主体函数********************
 /*test1*/
 function t1btn_1() {
-    var oT1bg = document.getElementById("t1bg");
-    oT1bg.style.width = "200px";
+    _$("t1bg").style.width = "200px";
 }
 function t1btn_2() {
-    var oT1bg = document.getElementById("t1bg");
-    oT1bg.style.height = "200px";
+    _$("t1bg").style.height = "200px";
 }
 function t1btn_3() {
-    var oT1bg = document.getElementById("t1bg");
-    oT1bg.style.background = "#09F";
+    _$("t1bg").style.background = "#09F";
 }
 function t1btn_4() {
-    var oT1bg = document.getElementById("t1bg");
-    oT1bg.style.display = "none";
+    _$("t1bg").style.display = "none";
 }
 function t1btn_5() {
-    var oT1bg = document.getElementById("t1bg");
-    oT1bg.style.display = "block";
+    _$("t1bg").style.display = "block";
 }
 
 /*test2*/
 function t2son(){
-    var oT2son = getElementById("oT2main");
+    var oT2son = _$("oT2main");
     oT2son.onclick=function(){
         oT2son.style.background = blue;
-    }
+    };
     /*
      for (var i=0;i<oT2son.length;i++)
      {
@@ -146,24 +126,24 @@ function t6bbbout(){
 }
 /*test7*/
 function t7Cover(i){
-    var oT7div = document.getElementById("t7menu").getElementsByTagName("div");
+    var oT7div = _$("t7menu").getElementsByTagName("div");
     oT7div[i].style.background = "#d0d0d0";
 
 }
 
 function t7Cout(i){
-    var oT7div = document.getElementById("t7menu").getElementsByTagName("div");
+    var oT7div = _$("t7menu").getElementsByTagName("div");
     oT7div[i].style.background = "white";
 }
 
 function t7btn(){
-    var oT7menu = document.getElementById("t7menu");
+    var oT7menu = _$("t7menu");
     oT7menu.style.display = oT7menu.style.display == "none"?"block":"none";
 }
 
 
 function t8bg(){
-    var oDiv = document.getElementById("t8bg").getElementsByTagName("div");
+    var oDiv = _$("t8bg").getElementsByTagName("div");
     for(var i = 0; i < oDiv.length; i++){
         oDiv[i].onclick = function (){
             alert(this.innerHTML);
@@ -172,10 +152,10 @@ function t8bg(){
 }
 
 function t10btn(){
-    var oBtn = document.getElementById("t10btn");
-    var oDiv1 = document.getElementById("t10Div1");
-    var oDiv3 = document.getElementById("t10Div3");
-    var oT10bg = document.getElementById("t10bg");
+    var oBtn = _$("t10btn");
+    var oDiv1 = _$("t10Div1");
+    var oDiv3 = _$("t10Div3");
+    var oT10bg = _$("t10bg");
     oBtn.onclick = function(){
         oDiv1.style.display = "block";
         oT10bg.style.display = "block";
@@ -233,6 +213,7 @@ function t25btn(){
 
 
 
-window.onload = function(){t8bg();t10btn();t12li();t13li();reset();}
+window.onload = function(){
+    _$();  t8bg(); t10btn(); t12li(); t13li(); reset(); testa(); }
 
 
