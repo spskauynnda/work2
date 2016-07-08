@@ -6,7 +6,14 @@ var _$ = function(id){
         return false;
     }
 }
-var _$$ = function(classname){
+var _$c = function(classname){
+    if (document.getElementsByClassName(classname)) {
+        return document.getElementsByClassName(classname);
+    } else {
+        return false;
+    }
+}
+var _$t = function(tagname){
     if (document.getElementsByClassName(classname)) {
         return document.getElementsByClassName(classname);
     } else {
@@ -22,7 +29,7 @@ var _$$ = function(classname){
 // ********************控制********************
 //  重置所有test.display为none，赋初值
 function reset(){
-    var testset = _$$("test");
+    var testset = _$c("test");
     for (var i=0;i < testset.length;i++)
         testset[i].style.display = "none";
 }
@@ -54,20 +61,13 @@ function list(dtNode) {
 
 //********************主体函数********************
 /*test1*/
-function t1btn_1() {
-    _$("t1bg").style.width = "200px";
-}
-function t1btn_2() {
-    _$("t1bg").style.height = "200px";
-}
-function t1btn_3() {
-    _$("t1bg").style.background = "#09F";
-}
-function t1btn_4() {
-    _$("t1bg").style.display = "none";
-}
-function t1btn_5() {
-    _$("t1bg").style.display = "block";
+function t1btn(){
+    var ot1=_$("t1bg");
+    _$("t1btn1").onclick = function(){ot1.style.width = "200px";}
+    _$("t1btn2").onclick = function(){ot1.style.height = "200px";}
+    _$("t1btn3").onclick = function(){ot1.style.background = "#09F";}
+    _$("t1btn4").onclick = function(){ot1.style.display = "none";}
+    _$("t1btn5").onclick = function(){ot1.style.display = "block";}
 }
 
 /*test2*/
@@ -88,42 +88,41 @@ function t2son(){
 
 /*test3*/
 function t3btn(){
-    var oT3btn = document.getElementById("t3btn");
-    var oT3t1= document.getElementById("t3t1");
-    var oT3t2= document.getElementById("t3t2");
-    alert(oT3t1.value);
-    alert(oT3t2.value);
+    var oT3btn = _$("t3btn");
+    var oT3t1= _$("t3t1");
+    var oT3t2= _$("t3t2");
+    oT3btn.onclick = function() {
+        alert(oT3t1.value);
+        alert(oT3t2.value);
+    }
 }
 
 /*test4*/
 function t4btn(){
-    var oT4btn = document.getElementById("t4btn");
-    var oT4li = document.getElementById("t4ul").getElementsByTagName("li");
+    var oT4btn = _$("t4btn");
+    var oT4li =  _$("t6bbb")("t4ul").getElementsByTagName("li");
     for (var i=0;i<oT4li.length;i++)
         oT4li[i].style.background="red";
 }
 
 function t5over(){
-    var oT5 = document.getElementById("t5org");
-    oT5.className="t5hover";
+    _$("t5org").className="t5hover";
 }
 
 function t5out(){
-    var oT5 = document.getElementById("t5org");
-    oT5.className="t5org";
+    _$("t5org").className="t5org";
 }
 
-function t6bbbover(){
-    var oT6btn = document.getElementById("t6btn");
-    var oT6bbb = document.getElementById("t6bbb");
-    oT6bbb.style.display = "block";
+function t6change(){
+    _$("t6btn").onmouseover = function(){
+        _$("t6bbb").style.display = "block";
+    }
+    _$("t6btn").onmouseout = function() {
+        _$("t6bbb").style.display = "none";
+    }
 }
 
-function t6bbbout(){
-    var oT6btn = document.getElementById("t6btn");
-    var oT6bbb = document.getElementById("t6bbb");
-    oT6bbb.style.display = "none";
-}
+
 /*test7*/
 function t7Cover(i){
     var oT7div = _$("t7menu").getElementsByTagName("div");
@@ -167,7 +166,7 @@ function t10btn(){
 }
 
 function t12li(){
-    var oLi = document.getElementById("t12box").getElementsByTagName("li");
+    var oLi = _$("t12box").getElementsByTagName("li");
     for(var i = 0;i < oLi.length; i++){
         oLi[i].onmouseover = function (){
             this.className = "t12li2";
@@ -179,8 +178,8 @@ function t12li(){
 }
 
 function t13li(){
-    var oLi = document.getElementById("t13menu").getElementsByTagName("li");
-    var oDiv = document.getElementById("t13com").getElementsByTagName("div");
+    var oLi = _$("t13menu").getElementsByTagName("li");
+    var oDiv = _$("t13com").getElementsByTagName("div");
     var i,j,k;
     for (i = 0;i < oLi.length; i++ ){
         oLi[i].index = i;
@@ -205,15 +204,15 @@ function t24btn(){
 
 /*test25*/
 function t25btn(){
-    var oT251 = document.getElementById("T251");
-    var oT252 = document.getElementById("T252");
-    var oT25sp = document.getElementById("s_q");
+    var oT251 = _$("T251");
+    var oT252 = _$("T252");
+    var oT25sp = _$("s_q");
     oT251.value > oT252.value ? (oT25sp.innerHTML = oT251.value) : (oT25sp.innerHTML = oT252.value);
 }
 
 
 
 window.onload = function(){
-    _$();  t8bg(); t10btn(); t12li(); t13li(); reset(); testa(); }
+    _$();  t1btn(); t3btn();  t6change();  t8bg();  t10btn(); t12li(); t13li(); reset(); testa();   }
 
 
